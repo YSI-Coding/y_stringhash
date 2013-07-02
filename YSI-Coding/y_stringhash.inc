@@ -67,8 +67,8 @@ Definitions:
 	_I - Generate a case insensitive string hash at compile time.
 \**--------------------------------------------------------------------------**/
 
-#include "..\YSI-Internal\y_version"
-#include "..\YSI-Core\y_debug"
+#include "..\YSI_Internal\y_version"
+#include "..\YSI_Core\y_debug"
 
 // Note: H_a, H_b, H_c, H_d, H_f and H_g are defined here, H_e in y_amx, H_z in
 // y_masteronce, H_u in y_users, H_y in y_timers.
@@ -314,6 +314,6 @@ stock YHash(const str[], bool:sensitive = true, e_HASH_TYPE:type = hash_bernstei
 #include "y_stringhash/fnv1"
 
 #if defined YSI_TESTS
-	#include "..\YSI-Core\y_testing"
+	#include "..\YSI_Core\y_testing"
 	#include "y_stringhash/tests"
 #endif
