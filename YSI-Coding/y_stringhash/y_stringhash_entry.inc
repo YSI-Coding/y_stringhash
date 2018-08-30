@@ -310,6 +310,18 @@ stock YHash(const str[], bool:sensitive = true, e_HASH_TYPE:type = hash_bernstei
 	len = min(len, strlen(str));
 	new
 		i = 0;
+	if (isnull(str))
+	{
+		switch (type)
+		{
+		case hash_bernstein:
+			return -1;
+		case hash_fnv1:
+			return 2166136261;
+		case hash_fnv1a:
+			return 2166136261;
+		}
+	}
 	if (str[0] > 255)
 	{
 		switch (type)
